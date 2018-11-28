@@ -119,10 +119,10 @@ class Buku extends CI_Controller {
 		$delete = $this->Buku_Model->delete($data, $id);
 
 		if($delete){
-			$this->session->set_flashdata('pesan_hapus', true);
+			$this->session->set_flashdata('pesan_delete', true);
 			redirect('buku');
 		}else{
-			$this->session->set_flashdata('pesan_hapus', false);
+			$this->session->set_flashdata('pesan_delete', false);
 			redirect('buku');
 		}	
 	}

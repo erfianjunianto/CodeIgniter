@@ -1,5 +1,16 @@
 <section class="content">
 	<div class="row">
+		<?php
+	      if($this->session->flashdata('pesan_delete') == true){
+	        if($_SESSION['pesan_delete'] == 1){
+	          echo '<div class="alert alert-success" role="alert"> Hapus data berhasil</div>';
+	        }else{
+	          echo '<div class="alert alert-danger" role="alert"> Hapus data gagal</div>';
+	        }
+	        
+	      }
+	    
+	    ?>
 		<div class="col-sm-12">
 			<div class="box box-danger">
 				<div class="box-header">
